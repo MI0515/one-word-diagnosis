@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# one-word-diagnosis
+ひとこと診断
+
