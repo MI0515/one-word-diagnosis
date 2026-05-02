@@ -1,0 +1,591 @@
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8mb4` /*application='App'*/[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8mb4` /*application='App'*/[0m
+Started GET "/" for 192.168.65.1 at 2026-05-01 18:19:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) /*application='App'*/[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='App'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-8.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-8.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (12.2ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2026-05-01 18:28:51.229388', '2026-05-01 18:28:51.229390') /*application='App'*/[0m
+Migrating to CreateFortunes (20260501182833)
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE `fortunes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `content` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20260501182833') /*application='App'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470') /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (1.7ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('今日はツッコミ冴えてる日', '2026-05-01 18:31:42.679370', '2026-05-01 18:31:42.679370') /*application='App'*/[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (0.4ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('会話ちょっと事故る日', '2026-05-01 18:31:42.686815', '2026-05-01 18:31:42.686815') /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (0.4ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('なぜかモテる日（気のせいです）', '2026-05-01 18:31:42.688808', '2026-05-01 18:31:42.688808') /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1 /*application='App'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470') /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='App'*/[0m
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:10:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='App'*/[0m
+Processing by FortunesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/index.html.erb within layouts/application
+  Rendered fortunes/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | GC: 3.1ms)
+Completed 200 OK in 92ms (Views: 19.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 38.7ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:11:38 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/index.html.erb within layouts/application
+  Rendered fortunes/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | GC: 0.3ms)
+Completed 200 OK in 42ms (Views: 33.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:11:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (22.2ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RANDOM() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 23.6ms (1 query, 0 cached) | GC: 1.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() LIMIT 1 /*action='result',application='App',controller='fortunes'*/' at line 1)
+Caused by: Mysql2::Error (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() LIMIT 1 /*action='result',application='App',controller='fortunes'*/' at line 1)
+
+Information for: ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() LIMIT 1 /*action='result',application='App',controller='fortunes'*/' at line 1):
+  
+
+Information for cause: Mysql2::Error (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() LIMIT 1 /*action='result',application='App',controller='fortunes'*/' at line 1):
+  
+app/controllers/fortunes_controller.rb:8:in `result'
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:15:23 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (9.4ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | GC: 0.3ms)
+Completed 200 OK in 42ms (Views: 8.1ms | ActiveRecord: 13.7ms (1 query, 0 cached) | GC: 4.3ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:15:54 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (2.9ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 1.6ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.6ms)
+Completed 200 OK in 28ms (Views: 8.4ms | ActiveRecord: 6.1ms (1 query, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:15:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/index.html.erb within layouts/application
+  Rendered fortunes/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:15:57 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (1.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:15:58 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.8ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:16:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/index.html.erb within layouts/application
+  Rendered fortunes/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:16:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.9ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:19:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (7.7ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 7.9ms | ActiveRecord: 11.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:19:09 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:29:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 20.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:29:57 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (10.5ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 4.3ms)
+Completed 200 OK in 28ms (Views: 7.6ms | ActiveRecord: 11.8ms (1 query, 0 cached) | GC: 4.3ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:29:58 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.1ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:30:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.9ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:30:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:30:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.7ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:30:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:30:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.7ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 1.4ms)
+Completed 200 OK in 13ms (Views: 4.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:30:03 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.9ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:30:04 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.8ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:30:04 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 1.6ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.4ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:30:05 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.4ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:30:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:30:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.4ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 1.2ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 1.9ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:30:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:30:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.8ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 1.4ms)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:30:09 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='App'*/[0m
+  [1m[36mFortune Load (0.7ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE (今日はツッコミ冴えてる日) LIMIT 1 /*application='App'*/[0m
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:31:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (4.9ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 10.9ms | ActiveRecord: 4.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:31:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 2.3ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:31:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (1.3ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.1ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:31:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 1.6ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:31:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.8ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 1.0ms)
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='App'*/[0m
+  [1m[36mFortune Load (1.3ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = '今日はツッコミ冴えてる日' LIMIT 1 /*application='App'*/[0m
+  [1m[36mFortune Load (0.4ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = '会話ちょっと事故る日' LIMIT 1 /*application='App'*/[0m
+  [1m[36mFortune Load (1.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = 'なぜかモテる日（気のせいです）' LIMIT 1 /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = 'ラッキーカラーは透明です' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (1.3ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('ラッキーカラーは透明です', '2026-05-01 19:35:27.517860', '2026-05-01 19:35:27.517860') /*application='App'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = '靴下が片方だけ行方不明になる日' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (1.0ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('靴下が片方だけ行方不明になる日', '2026-05-01 19:35:27.523824', '2026-05-01 19:35:27.523824') /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = '信号全部赤になる日' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (0.8ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('信号全部赤になる日', '2026-05-01 19:35:27.527823', '2026-05-01 19:35:27.527823') /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = 'めっちゃ走ったのに目の前で電車のドアが閉まる日' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (6.3ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('めっちゃ走ったのに目の前で電車のドアが閉まる日', '2026-05-01 19:35:27.530893', '2026-05-01 19:35:27.530893') /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = '全部めんどくさい日(たまにはマターリ休んじゃえ)' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (1.1ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('全部めんどくさい日(たまにはマターリ休んじゃえ)', '2026-05-01 19:35:27.539327', '2026-05-01 19:35:27.539327') /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = 'ラッキーナンバーは404' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (0.6ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('ラッキーナンバーは404', '2026-05-01 19:35:27.542546', '2026-05-01 19:35:27.542546') /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = 'お菓子の袋が綺麗に開かない日' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (0.7ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('お菓子の袋が綺麗に開かない日', '2026-05-01 19:35:27.545506', '2026-05-01 19:35:27.545506') /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = '傘持ってない時に限って雨降る日' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (0.7ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('傘持ってない時に限って雨降る日', '2026-05-01 19:35:27.548434', '2026-05-01 19:35:27.548434') /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = '何しようとしてたかすぐ忘れる日（脳疲労）' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (0.6ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('何しようとしてたかすぐ忘れる日（脳疲労）', '2026-05-01 19:35:27.551317', '2026-05-01 19:35:27.551317') /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = '「タコの心臓は3つある🫀」' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (0.8ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('「タコの心臓は3つある🫀」', '2026-05-01 19:35:27.554753', '2026-05-01 19:35:27.554753') /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[36mFortune Load (0.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` WHERE `fortunes`.`content` = '「カバの汗はピンク色💓」' LIMIT 1 /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mFortune Create (0.8ms)[0m  [1m[32mINSERT INTO `fortunes` (`content`, `created_at`, `updated_at`) VALUES ('「カバの汗はピンク色💓」', '2026-05-01 19:35:27.559138', '2026-05-01 19:35:27.559138') /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:35:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:35:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (4.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 3.3ms | ActiveRecord: 4.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:35:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.9ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:35:38 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:35:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.7ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:35:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:35:44 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (0.8ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 19:35:46 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 19:35:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (1.1ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/result" for 192.168.65.1 at 2026-05-01 20:26:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#result as HTML
+  [1m[36mFortune Load (51.3ms)[0m  [1m[34mSELECT `fortunes`.* FROM `fortunes` ORDER BY RAND() LIMIT 1 /*action='result',application='App',controller='fortunes'*/[0m
+  ↳ app/controllers/fortunes_controller.rb:8:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/result.html.erb within layouts/application
+  Rendered fortunes/result.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | GC: 0.0ms)
+Completed 200 OK in 100ms (Views: 17.8ms | ActiveRecord: 61.2ms (1 query, 0 cached) | GC: 4.0ms)
+
+
+Started GET "/" for 192.168.65.1 at 2026-05-01 20:26:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FortunesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fortunes/top.html.erb within layouts/application
+  Rendered fortunes/top.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
