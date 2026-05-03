@@ -1,8 +1,10 @@
-version: "3"
+version: "3.8"
 services:
   db:
     image: mysql:8.0
     environment:
+      TZ: Asia/Tokyo
+      RAILS_ENV: development
       MYSQL_ROOT_PASSWORD: password
     command: --default-authentication-plugin=mysql_native_password
     volumes:
@@ -11,12 +13,18 @@ services:
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle install && bin/rails s -b 0.0.0.0"
+    tty: true
+    stdin_open: true
     volumes:
-      - .:/app
+      - .:/rails
     ports:
       - "3000:3000"
     depends_on:
       - db
+    environment:
+      RAILS_ENV: development
+      NODE_ENV: development
+      TZ: Asia/Tokyo
 
 volumes:
   db-data:
