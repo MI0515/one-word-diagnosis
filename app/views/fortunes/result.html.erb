@@ -1,5 +1,10 @@
-<h1>診断結果</h1>
+<div class="page-container">
+  <h1 class="page-title">診断結果</h1>
 
-<p><%= @fortune.content %></p>
+  <p class="fortune-text">
+    <%= @fortune.content %>
+  </p>
+  
 
-<%= button_to "もう一回診断する？", root_path, method: :get %>
+  <%= link_to "もう一回診断する？", root_path, class: "sub-link" %>
+</div>
