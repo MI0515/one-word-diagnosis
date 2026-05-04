@@ -14,6 +14,16 @@
       <div class="rare-badge hidden" id="rare-badge">RARE</div>
     <% end %>
 
-    <%= link_to "トップに戻る", root_path, class: "sub-link hidden", id: "back-link" %>
+    <% share_text = "ひとこと診断の結果：#{@fortune.content}" %>
+
+    <div class="action-links hidden" id="action-links">
+      <%= link_to "Xでシェアする",
+                  "https://twitter.com/intent/tweet?text=#{ERB::Util.url_encode(share_text)}&url=#{ERB::Util.url_encode(app_url)}",
+                  target: "_blank",
+                  rel: "noopener",
+                  class: "sub-link" %>
+
+      <%= link_to "トップに戻る", root_path, class: "sub-link" %>
+    </div>
   </div>
 </div>

@@ -5,15 +5,17 @@ import "controllers"
 document.addEventListener("turbo:load", () => {
   const loadingText = document.getElementById("loading-text");
   const fortuneText = document.getElementById("fortune-text");
-  const backLink = document.getElementById("back-link");
+  const actionLinks = document.getElementById("action-links");
   const rareBadge = document.getElementById("rare-badge");
 
-  if (!loadingText || !fortuneText || !backLink) return;
+  if (!loadingText || !fortuneText || !actionLinks) {
+    return;
+  }
 
   setTimeout(() => {
     loadingText.classList.add("hidden");
     fortuneText.classList.remove("hidden");
-    backLink.classList.remove("hidden");
+    actionLinks.classList.remove("hidden");
 
     if (rareBadge) {
       rareBadge.classList.remove("hidden");
