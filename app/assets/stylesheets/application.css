@@ -149,6 +149,20 @@ body {
   animation: glow 1.5s ease-in-out infinite alternate;
 }
 
+.rare-badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: #d4a800;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.rare-badge::before,
+.rare-badge::after {
+  content: "✦";
+  margin: 0 4px;
+}
+
 @keyframes glow {
   from {
     text-shadow: 0 0 4px rgba(255, 215, 0, 0.2);
@@ -156,6 +170,13 @@ body {
   to {
     text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
   }
+}
+
+.action-links {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* ←ここで間隔調整 */
+  margin-top: 32px;
 }
 
 .sub-link {
@@ -178,6 +199,10 @@ body {
 }
 
 @media (max-width: 600px) {
+    .action-links {
+    gap: 24px;
+  }
+
   .page-container {
     padding: 56px 20px;
   }
