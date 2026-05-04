@@ -14,11 +14,11 @@
       <div class="rare-badge hidden" id="rare-badge">RARE</div>
     <% end %>
 
-    <% share_text = "ひとこと診断の結果：#{@fortune.content}" %>
+    <% share_text = "ひとこと診断の結果：#{@fortune.content} #ひとこと診断" %>
 
     <div class="action-links hidden" id="action-links">
       <%= link_to "Xでシェアする",
-                  "https://twitter.com/intent/tweet?text=#{ERB::Util.url_encode(share_text)}",
+                  "https://twitter.com/intent/tweet?text=#{ERB::Util.url_encode(share_text)}&url=#{ERB::Util.url_encode(root_url)}",
                   target: "_blank",
                   rel: "noopener",
                   class: "sub-link" %>
