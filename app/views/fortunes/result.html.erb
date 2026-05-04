@@ -18,7 +18,7 @@
 
     <div class="action-links hidden" id="action-links">
       <%= link_to "Xでシェアする",
-                  "https://twitter.com/intent/tweet?text=#{ERB::Util.url_encode(share_text)}&url=#{ERB::Util.url_encode(app_url)}",
+                  "https://twitter.com/intent/tweet?text=#{ERB::Util.url_encode(share_text)}",
                   target: "_blank",
                   rel: "noopener",
                   class: "sub-link" %>
