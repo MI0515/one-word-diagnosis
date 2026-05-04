@@ -1,13 +1,18 @@
 <div class="page-container">
-  <h1 class="page-title">一言診断</h1>
+  <div class="diagnosis-card">
+    <h1 class="page-title">ひとこと診断</h1>
 
-<p class="page-text">
-  今日のあなた、こんな感じかもよ。っていう診断です
-</p>
+    <p class="page-text-main">
+      今日のあなた、多分きっとこんな日。かも。
+    </p>
 
-<p class="page-text">
-ボタンを押すとひとこと診断結果がランダムで表示されます
-</p>
+    <p class="page-text-sub">
+      ボタンを押すとひとこと診断がランダムで表示されます
+    </p>
+    <p class="page-text-sub">
+      診断結果に雑学が出た人はラッキー。確率10%のレアだよ
+    </p>
 
-<%= button_to "診断する", result_path, method: :get %>
+    <%= link_to "診断する", result_path, class: "main-button ripple-button" %>
+  </div>
 </div>

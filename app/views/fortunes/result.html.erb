@@ -1,10 +1,19 @@
 <div class="page-container">
-  <h1 class="page-title">診断結果</h1>
+  <div class="diagnosis-card">
+    <h1 class="page-title">診断結果</h1>
 
-  <p class="fortune-text">
-    <%= @fortune.content %>
-  </p>
-  
+    <div class="loading-text" id="loading-text">
+      診断中...
+    </div>
 
-  <%= link_to "もう一回診断する？", root_path, class: "sub-link" %>
+    <p class="fortune-text hidden <%= 'rare' if @fortune.rare? %>" id="fortune-text">
+      <%= @fortune.content %>
+    </p>
+
+    <% if @fortune.rare? %>
+      <div class="rare-badge hidden" id="rare-badge">RARE</div>
+    <% end %>
+
+    <%= link_to "トップに戻る", root_path, class: "sub-link hidden", id: "back-link" %>
+  </div>
 </div>
