@@ -5,7 +5,7 @@ class FortunesController < ApplicationController
 # ┗━━━━━━━━━━━━━┛
 
   def result
-    @fortune = Fortune.order("RAND()").first
+    @fortune = Fortune.order("RANDOM()").first
   end
 # ┏━━━━━━━━━━━━━━━━━━━━━┓
 #  診断ページ用
