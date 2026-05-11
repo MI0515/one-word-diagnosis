@@ -112,7 +112,7 @@ https://one-word-diagnosis.onrender.com
 
 ### バックエンド
 
-* Ruby 3.x
+* Ruby 3.2.11
 * Ruby on Rails 8
 
 ### フロントエンド
