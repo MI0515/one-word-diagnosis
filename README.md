@@ -1,28 +1,53 @@
-# README
+## こだわったポイント
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 世界観の統一感
 
-Things you may want to cover:
+シンプルなアプリだからこそ、
+「空気感」や「温度感」の統一を特に意識しました。
 
-* Ruby version
+* フォント
+* 色味
+* UIデザイン
+* 診断結果の文章
 
-* System dependencies
+まで含め、全体をゆるく柔らかい雰囲気に寄せています。
 
-* Configuration
+---
 
-* Database creation
+### 「断定しない診断」
 
-* Database initialization
+診断アプリ特有の断定口調ではなく、
+「ゆるっとした ひとことをもらう」
+くらいの軽さを意識しました。
 
-* How to run the test suite
+そのため、診断結果自体も
+少しクスッとできたり、力が抜けるような言葉選びを意識しています。
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
+### レア要素
 
-* ...
+診断結果には、低確率で「雑学」が表示されます。
 
-# one-word-diagnosis
-ひとこと診断
+また、診断結果がレアの場合、
+レアバッジの表示と金色にキラキラ光っているようなの文字色にすることで、
+通常結果とレア結果の差を内容だけでなく視覚的にも分かりやすく楽しめるように工夫しています。
+
+「次はレアが出るかも」と、ついもう一回押したくなる体験を目指しました。
+
+また、雑学そのものがもともと自分の好きな要素でもあり、
+アプリに自分らしさを入れられたポイントでもあります。
+
+---
+
+### 手軽に何度も遊べる導線
+
+* 診断する
+* 診断中…
+* 結果表示
+* トップへ戻る
+* シェアする
+
+までをシンプルな導線にすることで、テンポよく何周も遊べるよう意識しました。
+
 
